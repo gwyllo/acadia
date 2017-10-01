@@ -23,6 +23,3 @@ E.g. Refer to [Reference Material](#Reference) for more resources.
 git clone https://github.com/gwyllo/acadia
 cd acadia
 ```
-
-Please refer to [Model Zoo](#Pre-trained-models) for more pre-trained models.
-`./examples/test_vangogh_style_on_ae_photos.sh` is an example script that downloads the pretrained Van Gogh style network and runs it on Efros's photos.
