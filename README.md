@@ -5,7 +5,7 @@ ACADIA machine learning workshop code and resources
 (TODO - collate key tutorial resources)
 E.g. broad overview of machine learning [Machine Learning Is Fun](https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471):
 (TODO - setup learning materials folder on git)
-E.g. Refer to [Reference Material](#Reference) for more resources.
+E.g. Refer to [Reference Material](/Reference/reference.md) for more resources.
 
 ## Workshop Setup
 
