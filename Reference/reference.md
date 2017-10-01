@@ -1,1 +1,0 @@
-#ACADIA Workshop Reference material
