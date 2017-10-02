@@ -50,3 +50,12 @@ cd acadia
 ### torchRNN
 - setup tutorial for scrapy on AWS
 - get jack to proof it
+
+### tSNE / search
+- n-dimensional layout algorithm
+- need to research how to do image search based on high-level features (high priority)
+
+## Feedback between Bots
+- Never-ending wander: Find similar image in a dataset, style this image, repeat
+- GAN feeback: CycleGAN/pix2pix an image trained on one kind of mapping, feed this into another network trained on another mapping
+- Semantic Labelling: One model marks something up (semantic labelling), another one tries to 'fill in' the marked up area, repeat
