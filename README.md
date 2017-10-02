@@ -68,3 +68,9 @@ cd acadia
 - Never-ending wander: Find similar image in a dataset, style this image, repeat
 - GAN feeback: CycleGAN/pix2pix an image trained on one kind of mapping, feed this into another network trained on another mapping
 - Semantic Labelling: One model marks something up (semantic labelling), another one tries to 'fill in' the marked up area, repeat
+
+## Implementation
+- python server listening for tweets
+- on receiving tweet run bash script (we have a list of bash scripts setup for each framework)
+- bash script needs to return whether content is image or text in order to correctly tweet result
+- tweet
