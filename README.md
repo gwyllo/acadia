@@ -24,6 +24,13 @@ git clone https://github.com/gwyllo/acadia
 cd acadia
 ```
 
+### Software
+- Notepad ++
+- WinSCP?
+- Jupyter notebook?
+- tensorboard?
+- screen
+
 ## Models
 
 ### StackGAN
