@@ -10,7 +10,7 @@ E.g. Refer to [Reference Material](/Reference/reference.md) for more resources.
 ## Workshop Setup
 
 ### Spinning up a Deep Learning Instance
-- Log in to RMIT-ACADIA Amazon EC2 account using (TODO - setup account)
+- Log in to RMIT-ACADIA Amazon EC2 account using (TODO - setup account w/ $2000 rmit funds)
 - Create a new instance using image (TODO - our image)
 
 ### SSH into your instance
@@ -23,3 +23,20 @@ E.g. Refer to [Reference Material](/Reference/reference.md) for more resources.
 git clone https://github.com/gwyllo/acadia
 cd acadia
 ```
+
+## Models
+
+### StackGAN
+- get basic text to image working
+
+### pix2pix
+- train two models and get them to feedback
+- generating datasets in GH
+
+### cycleGAN
+- train two models and get them to feedback
+- generating datasets in GH
+
+### torchRNN
+- setup tutorial for scrapy on AWS
+- get jack to proof it
