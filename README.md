@@ -55,6 +55,15 @@ cd acadia
 - n-dimensional layout algorithm
 - need to research how to do image search based on high-level features (high priority)
 
+## Bots
+- text to searched image using google api
+- (HARD) text to generated image using stackGAN 
+- image to similar image using CNN latent space
+- text to more text using torchRNN
+- content image to stylised image 
+- content image to semantic labels
+- semantic labels to stylised image
+
 ## Feedback between Bots
 - Never-ending wander: Find similar image in a dataset, style this image, repeat
 - GAN feeback: CycleGAN/pix2pix an image trained on one kind of mapping, feed this into another network trained on another mapping
