@@ -33,6 +33,9 @@ cd acadia
 
 ## Models
 
+### NeuralStyle
+- train a basic model
+
 ### StackGAN
 - get basic text to image working
 
