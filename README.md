@@ -64,3 +64,43 @@ All of our bots will work with the same basic python script. This script will ex
 - GAN feeback: CycleGAN/pix2pix an image trained on one kind of mapping, feed this into another network trained on another mapping
 - Semantic Labelling: One model marks something up (semantic labelling), another one tries to 'fill in' the marked up area, repeat
 
+# Workshop Schedule
+## Day 1
+### Morning
+* Overview of the project
+* Intro lecture from CN + GJ
+* Intro lecture from Ben- very brief overview of what a neural network is
+
+* Intro to bash
+* Intro to python
+* Intro to tweepy
+
+### Afternoon
+* Intro to scrapy
+* Intro to pix2pix
+* Break in to groups
+* Work with leaders of the groups to scrape data and begin training models 
+
+## Day 2
+### Morning
+* Gene lecture
+* Neural network overview - how to effectively train, basic maths
+* Convolutional networks
+* Visualisation - tSNE, latent space
+
+### Afternoon
+
+* Working with torch + tensorflow
+* Tweaking frameworks / project goals with gene - e.g. visualising layers, working with stackGan etc
+* Retrain models / calibrate
+
+## Day 3
+### Morning
+* Presentation of results
+* Feedback loops on local machine
+* Calibration
+
+### Afternoon
+* Publishing bots
+* Calibrating the ecosystem
+* Setup exhibition
