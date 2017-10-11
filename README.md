@@ -4,83 +4,63 @@ ACADIA machine learning workshop code and resources
 ## Workshop Resources and Introduction
 (TODO - collate key tutorial resources)
 E.g. broad overview of machine learning [Machine Learning Is Fun](https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471):
-(TODO - setup learning materials folder on git)
-E.g. Refer to [Reference Material](/Reference/reference.md) for more resources.
 (TODO - get proper list of requirements to students)
 
 ## Workshop Setup
 
-### Spinning up a Deep Learning Instance
-- Log in to RMIT-ACADIA Amazon EC2 account using (TODO - setup account w/ $2000 rmit funds)
-- Create a new instance using image (TODO - our image)
+### Logging in to Paperspace and launching the ACADIA image
+- Go to paperspace.com and sign in using your invite
+- Launch the console
+- Click new Machine
+- Use the ACADIA image and p9000 GPU
+- Start your new image!
 
-### SSH into your instance
-- Mac users
-- Windows users
+### Accessing your machine on the cloud
+- For writing code: Use Notepad++ and follow the instructions on the wiki
+- For large files: Use google drive and re-download from chrome in the virtual paperspace desktop. 
+- For small files: Use WINSCP and follow the instructions on the wiki
+- For running terminal commands: If you have a fast connection, you can use the terminal in the browser. It has a few quirks and you may prefer to simply SSH straight in to your instance using putty. Follow the instructions on the wiki
 
-### Get the code
-- Clone this repo:
-```bash
-git clone https://github.com/gwyllo/acadia
-cd acadia
-```
-
-### Software
-- Notepad ++
-- WinSCP?
-- Jupyter notebook?
-- tensorboard?
-- screen
+## Building a Twitter bot
+All of our bots will work with the same basic python script. This script will execute different shell scripts for running specific machine learning frameworks. For more info see the wiki.
 
 ## Models
 
-### NeuralStyle
-- train a basic model
-
-### StackGAN
-- get basic text to image working
-
 ### pix2pix
-- train two models and get them to feedback
-- generating datasets in GH
+- learns mappings between pairs of images
 
 ### cycleGAN
-- train two models and get them to feedback
-- generating datasets in GH
+- learns mappings between collections of images
 
 ### torchRNN
-- setup tutorial for scrapy on AWS
-- get jack to proof it
+- generates text character by character 
 
-### tSNE / search
-- n-dimensional layout algorithm
-- need to research how to do image search based on high-level features (high priority)
+### imagesearch
+- finds similar images using feature vectors from an image classifier
+
+### TODO - NeuralStyle (TODO) / stackGAN / DCGAN
+- changes the style of a content image
+- generates an image from text
+- interpolate between generated images
 
 ## Bots
+- get image between two images (DCGAN)
+- generate photo from edges (PIX2PIX)\
+- "enhance" an image / zoom in on an image (PIX2PIX)
+- texture an image (CYCLEGAN)
+- stylise an image (NeuralStyle)
 - text to searched image using google api
-- (HARD) text to generated image using stackGAN 
-- image to similar image using CNN latent space
+- find most similar image from a collection of images
 - text to more text using torchRNN
-- content image to stylised image 
-- content image to semantic labels
-- semantic labels to stylised image
+- content image to stylised image (NeuralStyle)
+
+(Hard)
+- text to image (stackGAN)
+- content image to semantic labels (PIX2PIX)
+- semantic labels to stylised image (PIX2PIX)
 
 ## Feedback between Bots
 - Never-ending wander: Find similar image in a dataset, style this image, repeat
 - GAN feeback: CycleGAN/pix2pix an image trained on one kind of mapping, feed this into another network trained on another mapping
 - Semantic Labelling: One model marks something up (semantic labelling), another one tries to 'fill in' the marked up area, repeat
 
-## Implementation
-- python server listening for tweets
-- on receiving tweet run bash script (we have a list of bash scripts setup for each framework)
-- bash script needs to return whether content is image or text in order to correctly tweet result
-- tweet
-
-## First goal: 
-- two python servers each running pix2pix models and listening for tweets
-- then setup feedback between the two
-- Jack needs to figure out what to train the networks on 
--- edges to photo (can use facades dataset that comes with pix2pix, or scrape archdaily) and vice versa
--- image to zoomed image and vice versa
--- etc - anything you can batch process in photoshop
--- or anything you can easily generate from GH (animate sliders)
