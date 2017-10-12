@@ -78,6 +78,7 @@ All of our bots will work with the same basic python script. This script will ex
 
 ### Afternoon
 * Intro to scrapy & xpath markup
+* Intro to photoshop batch
 * Intro to pix2pix
 * Break in to groups
 * Work with leaders of the groups to scrape data and begin training models 
