@@ -76,7 +76,7 @@ All of our bots will work with the same basic python script. This script will ex
 * Intro to tweepy
 
 ### Afternoon
-* Intro to scrapy
+* Intro to scrapy & xpath markup
 * Intro to pix2pix
 * Break in to groups
 * Work with leaders of the groups to scrape data and begin training models 
