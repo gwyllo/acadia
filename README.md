@@ -65,7 +65,7 @@ All of our bots will work with the same basic python script. This script will ex
 - Semantic Labelling: One model marks something up (semantic labelling), another one tries to 'fill in' the marked up area, repeat
 
 # Workshop Schedule
-## Day 1
+## Day 1 - Working with the python toolkit on paperspace
 ### Morning
 * Overview of the project
 * Intro lecture from CN + GJ
@@ -83,7 +83,7 @@ All of our bots will work with the same basic python script. This script will ex
 * Break in to groups
 * Work with leaders of the groups to scrape data and begin training models 
 
-## Day 2
+## Day 2 - Introduction to machine learning, Building models with Tensorflow and Torch
 ### Morning
 * Gene lecture
 * Neural network overview - how to effectively train, basic maths
@@ -96,7 +96,7 @@ All of our bots will work with the same basic python script. This script will ex
 * Tweaking frameworks / project goals with gene - e.g. visualising layers, working with stackGan etc
 * Retrain models / calibrate
 
-## Day 3
+## Day 3 - Building an ecosystem of autonomous agents
 ### Morning
 * Presentation of results
 * Feedback loops on local machine
