@@ -51,6 +51,7 @@ All of our bots will work with the same basic python script. This script will ex
 - Drawings / photos
 - Interiors
 - Sketches
+- Pre-made datasets (flowers, birds, art, landscapes)
 
 ## Bots
 - get image between two images (DCGAN)
