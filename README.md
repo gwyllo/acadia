@@ -71,6 +71,7 @@ All of our bots will work with the same basic python script. This script will ex
 * Intro lecture from CN + GJ
 * Intro lecture from Ben- very brief overview of what a neural network is
 
+* Provisioning VMs with Paperspace
 * Intro to bash
 * Intro to python
 * Intro to tweepy
