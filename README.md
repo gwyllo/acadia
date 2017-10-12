@@ -43,6 +43,15 @@ All of our bots will work with the same basic python script. This script will ex
 - generates an image from text
 - interpolate between generated images
 
+## Datasets
+- Scale
+- Programe
+- Localities
+- Materials
+- Drawings / photos
+- Interiors
+- Sketches
+
 ## Bots
 - get image between two images (DCGAN)
 - generate photo from edges (PIX2PIX)\
