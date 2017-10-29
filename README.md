@@ -29,6 +29,9 @@ All of our bots will work with the same basic python script. This script will ex
 ### NeuralStyle
 - applies the style of one image to the content of another
 
+### SubjectiveFunctions
+- high resolution texture synthesis
+
 ### torchRNN
 - generates text character by character 
 
