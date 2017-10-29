@@ -1,25 +1,19 @@
 # acadia
 ACADIA machine learning workshop code and resources
 
-## Workshop Resources and Introduction
-(TODO - collate key tutorial resources)
-E.g. broad overview of machine learning [Machine Learning Is Fun](https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471):
-(TODO - get proper list of requirements to students)
-
 ## Workshop Setup
 
 ### Logging in to Paperspace and launching the ACADIA image
 - Go to paperspace.com and sign in using your invite
 - Launch the console
 - Click new Machine
-- Use the ACADIA image and p9000 GPU
+- Use the ACADIA image and p6000 GPU
 - Start your new image!
 
 ### Accessing your machine on the cloud
-- For writing code: Use Notepad++ and follow the instructions on the wiki
-- For large files: Use google drive and re-download from chrome in the virtual paperspace desktop. 
-- For small files: Use WINSCP and follow the instructions on the wiki
-- For running terminal commands: If you have a fast connection, you can use the terminal in the browser. It has a few quirks and you may prefer to simply SSH straight in to your instance using putty. Follow the instructions on the wiki
+- For writing code: Use Gedit on the paperspace virtual desktop or Notepad++ and follow the instructions on the wiki
+- For transferring files: Use google drive and re-download from chrome in the virtual paperspace desktop, or use WINSCP and follow the instructions on the wiki
+- For running terminal commands: Use the terminal in the paperspace virtual desktop. It has a few quirks and you may prefer to simply SSH straight in to your instance using putty. Follow the instructions on the wiki
 
 ## Building a Twitter bot
 All of our bots will work with the same basic python script. This script will execute different shell scripts for running specific machine learning frameworks. For more info see the wiki.
@@ -32,16 +26,15 @@ All of our bots will work with the same basic python script. This script will ex
 ### cycleGAN
 - learns mappings between collections of images
 
+### NeuralStyle
+- applies the style of one image to the content of another
+
 ### torchRNN
 - generates text character by character 
 
 ### imagesearch
 - finds similar images using feature vectors from an image classifier
 
-### TODO - NeuralStyle (TODO) / stackGAN / DCGAN
-- changes the style of a content image
-- generates an image from text
-- interpolate between generated images
 
 ## Datasets
 - Scale
@@ -54,68 +47,48 @@ All of our bots will work with the same basic python script. This script will ex
 - Screengrabs
 - Pre-made datasets (flowers, birds, art, landscapes)
 
-## Bots
-- get image between two images (DCGAN)
-- generate photo from edges (PIX2PIX)\
-- "enhance" an image / zoom in on an image (PIX2PIX)
-- texture an image (CYCLEGAN)
-- stylise an image (NeuralStyle)
-- text to searched image using google api
-- find most similar image from a collection of images
-- text to more text using torchRNN
-- content image to stylised image (NeuralStyle)
-
-(Hard)
-- text to image (stackGAN)
-- content image to semantic labels (PIX2PIX)
-- semantic labels to stylised image (PIX2PIX)
-
-## Feedback between Bots
-- Never-ending wander: Find similar image in a dataset, style this image, repeat
-- GAN feeback: CycleGAN/pix2pix an image trained on one kind of mapping, feed this into another network trained on another mapping
-- Semantic Labelling: One model marks something up (semantic labelling), another one tries to 'fill in' the marked up area, repeat
+## Ecosystem Tools
+- text to searched image using google api / instagram api etc
+- feature search with TENSORFLOW
 
 # Workshop Schedule
 ## Day 1 - Working with the python toolkit on paperspace
 ### Morning
-* Overview of the project
-* Intro lecture from CN + GJ
-* Intro lecture from Ben - very brief overview of what a neural network is
+* 9:00am Overview of the project and Intro from CN+GJ
+* 10:00am Intro lecture from Ben - very brief overview of what a neural network is
 
-* Setup: Creating accounts and Provisioning VMs with Paperspace
+* 10:30am Setup: Creating accounts and Provisioning VMs with Paperspace
+* 11:00am Setup: Twitter accounts (test and developer) / secrets
 
-* Intro to bash
-** sub list
-* Intro to python
-* Intro to tweepy
+* 11:30am Intro to bash (navigation, installation and running and creating scripts)
+* 11:45am Intro to python (syntax, variables, hello world, functions)
 
 ### Afternoon
-* Intro to scrapy & xpath markup
-* Intro to photoshop batch
-* Intro to pix2pix
-* Break in to groups
-* Work with leaders of the groups to scrape data and begin training models 
+* 2:00pm Intro to tweepy (go over bot framework)
+* 2:45pm Bot test (receive and generate image)
+* 3:00pm Intro to photoshop batch
+* 3:30pm Batch processes: Find Edges -> Photo, Zooming, Missing content -> Full Image, Greyscale -> Colour, Posterize -> Photo
+* 4:00pm Intro to pix2pix. Examples, Training Script + Sampling Script, LightDisplay
+* If time - post results of trained model to twitter
 
 ## Day 2 - Introduction to machine learning, Building models with Tensorflow and Torch
 ### Morning
-* Gene lecture
-* Neural network overview - how to effectively train, basic maths
-* Convolutional networks
-* Visualisation - tSNE, latent space
+* 9:00am Gene Kogan lecture - context and projects
+* 10:00am Neural network overview (mathmatical models, layers, heuristics)
+* 10:30am Convolutional networks (max pooling etc) and GAN overview (explanation of how pix2pix and cycleGAN works)
+* 11:00am Overview of available models: Pix2Pix, CycleGAN, Style Transfer, FeatureSearch, CharRNN
+* 11:30am Project discussion - productive models of feedback between these bots. Content generation vs content transfer, 'markup' and 'critique', real-time similary search etc.
 
 ### Afternoon
-
-* Working with torch + tensorflow
-* Tweaking frameworks / project goals with gene - e.g. visualising layers, working with stackGan etc
-* Retrain models / calibrate
+* 2:00pm Intro to scrapy and xpath (modifying scraper for new data sets
+* 3:00pm Project work
 
 ## Day 3 - Building an ecosystem of autonomous agents
 ### Morning
-* Presentation of results
-* Feedback loops on local machine
-* Calibration
+* 9:00am Presentations and discussion
+* 11:00am Feedback loops on local machine and between twitter bots
+* 12:00pm Project work
 
 ### Afternoon
-* Publishing bots
-* Calibrating the ecosystem
-* Setup exhibition
+* 2:00pm Project work
+* 4:00pm Setup exhibition
