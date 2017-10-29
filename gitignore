@@ -1,5 +1,0 @@
-*.pyc
-*.pth
-*secrets.py
-/datasets/
-
