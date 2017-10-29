@@ -35,6 +35,12 @@ All of our bots will work with the same basic python script. This script will ex
 ### torchRNN
 - generates text character by character 
 
+## DCGAN
+- similar image generator
+
+## DISCOGAN
+- learns mappings between image sets
+
 ### imagesearch
 - finds similar images using feature vectors from an image classifier
 
