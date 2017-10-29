@@ -18,7 +18,7 @@ ACADIA machine learning workshop code and resources
 ## Building a Twitter bot
 All of our bots will work with the same basic python script. This script will execute different shell scripts for running specific machine learning frameworks. For more info see the wiki.
 
-## Models
+## Models (/ml)
 
 ### pix2pix
 - learns mappings between pairs of images
@@ -36,7 +36,7 @@ All of our bots will work with the same basic python script. This script will ex
 - finds similar images using feature vectors from an image classifier
 
 
-## Datasets
+## Datasets (/ml/data)
 - Scale
 - Programe
 - Localities
