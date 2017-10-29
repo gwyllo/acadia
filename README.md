@@ -71,7 +71,7 @@ All of our bots will work with the same basic python script. This script will ex
 * 4:00pm Intro to pix2pix. Examples, Training Script + Sampling Script, LightDisplay
 * If time - post results of trained model to twitter
 
-## Day 2 - Introduction to machine learning, Building models with Tensorflow and Torch
+## Day 2 - Introduction to machine learning, implementing models and scraping data
 ### Morning
 * 9:00am Gene Kogan lecture - context and projects
 * 10:00am Neural network overview (mathmatical models, layers, heuristics)
