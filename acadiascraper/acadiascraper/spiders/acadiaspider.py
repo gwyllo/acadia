@@ -5,8 +5,8 @@ import scrapy
 class ArchdailySpider(scrapy.Spider):
 	name = "archdaily-spider"
 	def start_requests(self):
-		for page in range(0,10):
-			yield self.make_requests_from_url('http://www.archdaily.com/projects/page/%d'%page)
+		for page in range(0,1):
+			yield self.make_requests_from_url('https://www.archdaily.com/projects/page/%d'%page)
 	#start_urls = ["http://www.archdaily.com/projects/page/1","http://www.archdaily.com/projects/page/2","http://www.archdaily.com/projects/page/3"]
 	
 	def parse(self, response):

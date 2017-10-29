@@ -1,4 +1,3 @@
-# import the necessary packages
 # -*- coding: utf-8 -*-
 from acadiascraper.items import *
 import scrapy
@@ -28,19 +27,23 @@ class ArchdailySpider(scrapy.Spider):
 	def parse_project(self, response):
 		#Lets try to grab some images. We can even check to markup to only get certain
 		# types of images. Here we can check if image is a drawing
-		#img = response.xpath("//img[contains(@alt, 'elevation') or contains(@alt, 'Elevation') or contains(@alt, 'plan') or contains(@alt, 'Plan') or contains(@alt, 'section') or contains(@alt, 'Section')]/@src").extract()
-		#photographs are identified with the © symbol
-		img = response.xpath("//img[contains(@alt, '©')]/@src").extract()
+		img = response.xpath("//img[contains(@alt, 'elevation') or contains(@alt, 'Elevation') or contains(@alt, 'plan') or contains(@alt, 'Plan') or contains(@alt, 'section') or contains(@alt, 'Section')]/@data-src").extract()
+		#photographs are identified with the Â© symbol
+		#img = response.xpath(u"//img[contains(@alt, 'Â©')]/@data-src").extract()
 		#all images
-		#img = response.xpath("//img/@src").extract()
+		#img = response.xpath("//img/@data-src").extract()
 		#store the result 
 		imageURL = [response.urljoin(i) for i in img]
-
+		
 		# grab the title and publication date of the current issue
 		title = ' '.join(s.rstrip().lstrip() for s in response.css("header.article-header h1::text").extract())
 		tags = response.css(".single-tags-cats a::text").extract()
  		body = ' '.join(s.rstrip() for s in response.css(".afd-post-content p::text").extract() if len(s.rstrip())>0)
+		
 		# Check if we got any images. One way of parsing the scrape is to only 
 		# yield projects that have certain tags e.g. 
-		if imageURL is not None and ("Houses" in tags):
+		# if imgURL is not None and ("Houses" in tags):
+		if imageURL is not None:
 			yield AcadiascraperItem(title=title, tags=tags, body = body, file_urls=imageURL)
+			
+		

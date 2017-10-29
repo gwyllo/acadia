@@ -90,6 +90,6 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 #DOWNLOADER_CLIENTCONTEXTFACTORY = 'acadiascraper.contextfactory.TLSFlexibleContextFactory'
-DOWNLOADER_CLIENT_TLS_METHOD = 'TLS'
+DOWNLOADER_CLIENT_TLS_METHOD = 'TLSv1.0'
 FILES_STORE = "./output"
 FEED_EXPORT_ENCODING = 'utf-8'
