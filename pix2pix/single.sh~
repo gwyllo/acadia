@@ -1,0 +1,10 @@
+dataset_name="archdaily_houses"
+model_name="ad"
+
+rm "./datasets/$dataset_name/single/*"
+rm "./datasets/$dataset_name/test/*"
+mv $1 "./datasets/$dataset_name/single/twitter.png"
+
+python test.py --dataroot ./datasets/$dataset_name --name $model_name --model pix2pix --which_model_netG unet_1024 --loadSize 1054 --fineSize 1024 --which_direction BtoA --dataset_mode single --norm batch
+
+mv "./results/$model_name/test_latest/images/twitter_fake_B.png" $2
