@@ -16,9 +16,16 @@ from PIL import Image
 from PIL import ImageFile
 import random
 import sys
+import time
 
 tracking_tag=handle
 ml_script=sys.argv[1]
+
+
+target = None
+if len(sys.argv) > 2:
+    target = sys.argv[2]
+    reply = True
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -40,15 +47,20 @@ def tweet_image(url, username, status_id):
         new_filename = process_image(filename)
         # scramble(filename)
         # Update the authenticated users status
-        api.update_with_media(new_filename, status='@{0}'.format(username), in_reply_to_status_id=status_id)
+        if target is None or target is "":
+            api.update_with_media(new_filename, status='@{0}'.format(username), in_reply_to_status_id=status_id)
+        else:
+            api.update_with_media(new_filename, status='@{0}'.format(target))
+        #sleep for 5s
+        time.sleep(5000)
     else:
         print("Error: Unable to download image")
 
 def execute_shell(cmd):
     print("... Executing command: "+cmd)
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    for c in iter(p.stdout.readline, ''):
-        print(c)
+    #for c in iter(p.stdout.readline, ''):
+    #    print(c)
     p.wait()
         
 def process_image(filename):
@@ -83,6 +95,8 @@ class BotStreamer(tweepy.StreamListener):
 print ("INITIALISING     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 myStreamListener = BotStreamer()
 print("... Listening for..."+tracking_tag)
+if target is not None and target is not "":
+    print("... Tweeting to..."+target)
 stream = tweepy.Stream(auth, myStreamListener)
 stream.filter(track=[tracking_tag])
 print ("SESSION ENDED    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
