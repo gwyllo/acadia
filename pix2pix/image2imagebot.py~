@@ -1,8 +1,6 @@
 # image2imagebot.py
 
 # the name of the acc
-#dataset_name="archdaily_sketches"
-#model_name="archdaily_sketches_gen2"
 
 #subprocess to run shell script
 import subprocess

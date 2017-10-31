@@ -1,8 +1,8 @@
-dataset_name="archdaily_houses"
-model_name="ad"
+dataset_name="acadia"
+model_name="acadia"
 
-rm "./datasets/$dataset_name/single/*"
-rm "./datasets/$dataset_name/test/*"
+rm ./datasets/$dataset_name/single/*
+rm ./datasets/$dataset_name/test/*
 mv $1 "./datasets/$dataset_name/single/twitter.png"
 
 python test.py --dataroot ./datasets/$dataset_name --name $model_name --model pix2pix --which_model_netG unet_1024 --loadSize 1054 --fineSize 1024 --which_direction BtoA --dataset_mode single --norm batch

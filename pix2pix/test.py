@@ -17,8 +17,8 @@ import subprocess
 def execute_shell(cmd):
 	print("... Executing command: "+cmd)
 	p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-	for c in iter(p.stdout.readline, ''):
-		print(c)
+	#for c in iter(p.stdout.readline, ''):
+	#	print(c)
 	p.wait()
 
 if (opt.dataset_mode=="single"):

@@ -22,7 +22,7 @@ def execute_shell(cmd):
 	p.wait()
 
 if (opt.dataset_mode=="single"):
-    execute_shell("python combine_singular.py --input_dir "+opt.dataroot+"/single/ --output_dir "+opt.dataroot+"/test/"
+    execute_shell("python combine_singular.py --input_dir "+opt.dataroot+"/single/ --output_dir "+opt.dataroot+"/test/")
     opt.dataset_mode="aligned"
 
 data_loader = CreateDataLoader(opt)

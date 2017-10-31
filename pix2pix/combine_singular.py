@@ -29,4 +29,4 @@ for sp in splits:
         im_AB = np.concatenate([im, im], 1)
         cv2.imwrite(img_tar_path, im_AB)
     else:
-        print "Could not load file: "+img_src_path
+        print ("Could not load file: "+img_src_path)

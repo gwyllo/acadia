@@ -47,8 +47,8 @@ def tweet_image(url, username, status_id):
 def execute_shell(cmd):
     print("... Executing command: "+cmd)
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    for c in iter(p.stdout.readline, ''):
-        print(c)
+    #for c in iter(p.stdout.readline, ''):
+    #    print(c)
     p.wait()
         
 def process_image(filename):
